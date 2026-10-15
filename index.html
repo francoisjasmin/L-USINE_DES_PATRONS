@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#090d1f">
+  <meta name="description" content="L'Usine des Patrons : aventure pédagogique interactive sur Factory, Abstract Factory, Builder, Prototype et Singleton.">
+  <title>L'Usine des Patrons — Académie des Architectes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="background-grid" aria-hidden="true"></div>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+  <div id="particle-layer" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button id="brand-home" class="brand" aria-label="Retour à l'accueil">
+      <span class="brand-mark"><span class="gear-symbol">⚙</span></span>
+      <span><strong>L'USINE <i>DES PATRONS</i></strong><small>ACADÉMIE DES ARCHITECTES · ÉDITION 01</small></span>
+    </button>
+    <div class="hud" aria-label="Statistiques de la partie">
+      <div class="hud-stat"><span class="hud-icon">✦</span><span><small>EXPÉRIENCE</small><b id="hud-xp">0000 XP</b></span></div>
+      <div class="hud-stat"><span class="hud-icon">◈</span><span><small>ATELIERS</small><b id="hud-progress">0 / 5</b></span></div>
+      <div class="hud-stat"><span class="hud-icon">🏆</span><span><small>TROPHÉES</small><b id="hud-trophies">0 / 6</b></span></div>
+    </div>
+    <button id="open-guide" class="small-button" aria-label="Afficher le guide">? <span>GUIDE</span></button>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="side-heading"><span class="eyebrow">// PLAN DE L'USINE</span><p>Les 5 ateliers</p></div>
+      <nav id="world-nav" class="world-nav" aria-label="Ateliers disponibles"></nav>
+      <div class="side-footer">
+        <span class="system-led"></span>
+        <div><strong>MODE LOCAL ACTIF</strong><small>100 % hors ligne · sans son</small></div>
+      </div>
+    </aside>
+
+    <main class="main" id="main" tabindex="-1" aria-live="polite"></main>
+
+    <aside class="intel-panel">
+      <div class="intel-heading"><span class="eyebrow">// RAPPORT DE MAÎTRISE</span><h2>État des systèmes</h2></div>
+      <div id="mastery-panel"></div>
+      <div class="intel-separator"></div>
+      <div class="intel-heading"><span class="eyebrow">// COLLECTION</span><h2>Trophées</h2></div>
+      <div id="trophy-panel"></div>
+      <div class="intel-tip"><span>💡</span><p id="intel-tip-text">Une bonne architecture commence par le bon problème à résoudre.</p></div>
+    </aside>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <noscript><p class="no-js">Ce jeu nécessite JavaScript. Active-le puis rouvre index.html.</p></noscript>
+</body>
+</html>
